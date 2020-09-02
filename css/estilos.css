@@ -1,0 +1,54 @@
+/* css personalizado */
+body{
+	/*padding-top: 70px;*/
+	
+}
+
+footer{
+	bottom: 0px;
+	background-color: #2E2E2E;
+	color: #fff;
+	width: 100%;
+}
+
+section{
+	height: 1200px;
+}
+
+figure{
+	text-align:center;
+	margin-bottom: 20px;
+}
+
+figure img{
+	margin: 0 auto;
+}
+
+textarea {
+   resize: none; /* Desabilita o extendimento do textarea */
+}
+
+.linhaCinza {
+    background: gray;
+}
+
+.bg-padding{
+    padding: 15px;
+}
+
+.imgSlider{
+	width: 100%;
+}
+
+.mostraCapa{
+	height: 230px;
+}
+
+.preco{
+	font-weight: bold;
+	color: red;
+}
+
+.obriga{
+	color:red;
+}

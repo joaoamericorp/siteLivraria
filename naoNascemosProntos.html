@@ -1,0 +1,218 @@
+<!doctype html> <!-- necessário para o Bootstrap -->
+<html>
+<head>
+    <title>Livraria Sophos - Projeto Integrador - Módulo 3</title>
+    <meta charset="utf-8"/>
+    
+    <!-- define a viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- inserindo css do Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="all" />
+	
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+    
+    <!-- inserindo css personalizado -->
+    <link href="css/estilos.css" rel="stylesheet" media="all" />
+	
+	<link rel="shortcut icon" type="image/x-icon" href="img/logoFav.ico">
+	
+	<script>
+		function calculaTotal(){
+			var qtdComprar, total, precoLivro;
+			
+			qtdComprar = document.calcula.qtd.value;
+			
+			qtdComprar = parseInt(qtdComprar);
+			
+			precoLivro = 100.00;
+			
+			total = qtdComprar * precoLivro;
+			
+			total =  total.toFixed(2);
+			
+			document.calcula.totalCompra.value = "R$ " + total;
+		}
+	</script>
+	
+</head>
+    
+<body>
+
+<div class="container">
+
+	<header>
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="img/logo.png" alt="Livraria Sophos" class="img-responsive" />
+			</div>
+		</div>
+    </header>
+	
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <span class="sr-only">(current)</span></a></li>
+        <li><a href="quemsomos.html">Quem somos</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="adm.html">Administração</a></li>
+            <li><a href="direito.html">Direito</a></li>
+            <li><a href="filosofia.html">Filosofia</a></li>
+            <li><a href="info.html">Informática</a></li>
+            <li><a href="psico.html">Psicologia</a></li>
+          </ul>
+        </li>
+	  <li><a href="cadastro.html">Cadastro</a></li>
+	  <li><a href="contatos.html">Fale conosco</a></li>
+      </ul>      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/carousel-item-1.jpg" alt="" class="imgSlider">
+    </div>
+    <div class="item">
+      <img src="img/carousel-item-2.jpg" alt="" class="imgSlider">
+    </div>
+    <div class="item">
+      <img src="img/carousel-item-3.jpg" alt="" class="imgSlider">
+    </div>
+	<div class="item">
+      <img src="img/carousel-item-4.jpg" alt="" class="imgSlider">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<section>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="page-header">
+				<h1>Não nascemos Prontos!</h1>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<figure>
+				<div class="mostraCapa">
+					<img src="img/livros/filosofia/naoNascemosProntos.jpg" class="img-responsive" alt="" style="width:70%; height: 100%;" />
+				</div>
+			</figure>
+		</div>
+		
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<form name="calcula">
+				<div class="row">
+					<h2>Preço: R$ 100,00</h2>
+				</div>
+				
+				<div class="row">
+					<div  class="form-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" name="qtd" value=""  placeholder="Quantidade" />
+					</div>
+				
+					<div class="form-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<button type="button" class="btn btn-info" onclick="calculaTotal()">Calcular total</button>
+					</div>
+					
+					<div  class="form-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" name="totalCompra" value=""  disabled />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="row">
+		<h2 class="page-header">Sinopse</h2>
+	</div>
+	
+	<div class="row">
+		<p>'Não nascemos prontos!', de Mario Sergio Cortella, apresenta crônicas que discutem temas diversos à luz da filosofia. A qualidade do livro é a união entre a filosofia e o cotidiano. O autor faz esta relação nos ensaios que tratam de temas como acomodação, flexibilidade para as mudanças, a pressa característica do mundo atual, aceleração do cotidiano, falta de esperança das novas gerações e o sentido da amizade. Esta obra procura levar o leitor a refletir sobre temas como responsabilidade ética e social, gestão corporativa para empresas, gestão do conhecimento, do ser humano e do ócio recreativo.</p>
+	</div>
+	
+	<div class="row">
+		<h2 class="page-header">Detalhes do produto</h2>
+	</div>
+	
+	<div class="row">
+		<p>Subtítulo: 	PROVOCAÇOES FILOSOFICAS<br/>
+		Origem: 	NACIONAL<br/>
+		Editora: VOZES<br/>
+		Coleção: 	NOBILIS<br/>
+		Edição: 	8<br/>
+		Assunto: Filosofia - Moral e Ética<br/>
+		Idioma: PORTUGUÊS<br/>
+		Ano: 	2009<br/>
+		País de Produção: BRASIL<br/>
+		Código de Barras: 	9788532632869<br/>
+		ISBN: 	8532632866<br/>
+		Encadernação: 	BROCHURA<br/>
+		Altura: 21,00 cm<br/>
+		Largura: 14,00 cm<br/>
+		Peso: 0,18 kg<br/>
+		Complemento: 	NENHUM<br/>
+		Nº de Páginas: 	136</p>
+	</div>
+</div>	
+</section>
+
+<footer>
+		<div class="row">
+			<div class="col-xs-12">
+				Projeto Laboratório de Prática de Aprendizagem<br/>
+				Projetado e desenvolvido pelo professor: João Américo
+			</div>
+		</div>
+</footer>
+</div>
+    
+	<!-- script JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<!-- inserindo JavaScript do Bootstrap -->
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
